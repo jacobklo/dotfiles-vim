@@ -1,0 +1,2 @@
+ alias gitdotvim='git --git-dir=$HOME/.gitdotvim/ --work-tree=$HOME'
+ gitdotvim config --local status.showUntrackedFiles no
