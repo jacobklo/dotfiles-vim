@@ -1,0 +1,12 @@
+[submodule ".vim/bundle/badwolf"]
+	path = .vim/bundle/badwolf
+	url = https://github.com/sjl/badwolf.git
+[submodule ".vim/bundle/Vundle"]
+	path = .vim/bundle/Vundle
+	url = https://github.com/VundleVim/Vundle.vim.git
+[submodule ".vim/bundle/Vundle.vim"]
+	path = .vim/bundle/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim.git
+[submodule ".vim/bundle/vdebug"]
+	path = .vim/bundle/vdebug
+	url = https://github.com/vim-vdebug/vdebug.git
