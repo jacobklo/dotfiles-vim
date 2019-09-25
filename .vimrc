@@ -33,4 +33,4 @@ filetype plugin indent on    " required
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
 
-colorscheme badwolf"
+color sublimemonokai
