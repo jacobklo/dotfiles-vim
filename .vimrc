@@ -5,20 +5,27 @@ set termguicolors
 
 filetype off                  " required
 
+
+" make sure all vim modules updated that is using git
+silent exec "!git --git-dir=$HOME/.gitdotvim/ --work-tree=$HOME submodule update --init --recursive"
+  
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
+
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'vim-vdebug/vdebug'
 " use komodo-python to debug python, use :help Vdebug for help
-"
+Plugin 'vim-vdebug/vdebug'
 
+" theme
 Plugin 'sjl/badwolf'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
