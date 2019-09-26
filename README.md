@@ -31,6 +31,13 @@ echo "source ~/.bashrc_vim" >> ~/.bashrc
 ```
 
 
+# pull all the git submodules
+Now, pull all the git submodules inside this repo, especially all the vim plugins
+```
+gitdotvim submodule update --init --recursive
+```
+
+
 # Commit changes
 Now, you can use a special git command: gitdotvim.
 
