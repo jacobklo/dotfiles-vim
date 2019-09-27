@@ -1,3 +1,4 @@
 .gitdotvim/
+.gitdotbash/
 __pycache__/
 *.pyc
