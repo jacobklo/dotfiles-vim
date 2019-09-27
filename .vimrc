@@ -1,10 +1,18 @@
-set nocompatible              " be iMproved, required
-set mouse=a
+ret nocompatible              " be iMproved, required
+"set mouse=a
 set number
+
+" powerline stuff
+set rtp+=.local/lib/python3/site-packages/powerline/bindings/vim/
+set laststatus=2
 set termguicolors
+set noshowmode
+
+color sublimemonokai
+
+
 
 filetype off                  " required
-
 
 " make sure all vim modules updated that is using git
 silent exec "!git --git-dir=$HOME/.gitdotvim/ --work-tree=$HOME submodule update --init --recursive"
@@ -40,4 +48,3 @@ filetype plugin indent on    " required
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
 
-color sublimemonokai
