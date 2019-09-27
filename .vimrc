@@ -3,7 +3,7 @@ ret nocompatible              " be iMproved, required
 set number
 
 " powerline stuff
-set rtp+=.local/lib/python3/site-packages/powerline/bindings/vim/
+set rtp+=~/.local/lib/python3/site-packages/powerline/bindings/vim/
 set laststatus=2
 set termguicolors
 set noshowmode
@@ -15,7 +15,7 @@ color sublimemonokai
 filetype off                  " required
 
 " make sure all vim modules updated that is using git
-silent exec "!git --git-dir=$HOME/.gitdotvim/ --work-tree=$HOME submodule update --init --recursive"
+silent exec "!cd ~ && git --git-dir=$HOME/.gitdotvim/ --work-tree=$HOME submodule update --init --recursive"
   
 
 " set the runtime path to include Vundle and initialize
