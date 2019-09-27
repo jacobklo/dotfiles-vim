@@ -10,7 +10,8 @@ set noshowmode
 
 color sublimemonokai
 
-
+" Open file explorer
+autocmd vimenter * NERDTree
 
 filetype off                  " required
 
@@ -34,6 +35,8 @@ Plugin 'vim-vdebug/vdebug'
 " theme
 Plugin 'sjl/badwolf'
 
+" Nerdtree
+Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

@@ -10,3 +10,6 @@
 [submodule ".vim/bundle/vdebug"]
 	path = .vim/bundle/vdebug
 	url = https://github.com/vim-vdebug/vdebug.git
+[submodule "/home/j/.vim/bundle/nerdtree"]
+	path = /home/j/.vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
