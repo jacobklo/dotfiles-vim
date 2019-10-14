@@ -1972,11 +1972,11 @@ class dbgpClient(clientBase):
             self.stack.append((self._interactiveDebugger.frame, 0))
         self.curindex = 0
 
-    def interaction(self, frame, tb = None, async = 0):
+    def interaction(self, frame, tb = None, m_async = 0):
         self.interrupt = 0
         self.setup(frame, tb)
         try:
-            return self.requester.cmdloop(async)
+            return self.requester.cmdloop(m_async)
         finally:
             self.forget()
         return RESUME_STOP
@@ -2520,16 +2520,16 @@ class backend(listcmd.ListCmd):
             self._continue != RESUME_STOP and \
             not self.socket.queue.empty()
 
-    def cmdloop(self, async=0):
+    def cmdloop(self, m_async=0):
         # loop reading commands until no more commands are avialable
         # if this is async, only do one command
         #log.debug("cmdloop async=%d", async)
-        if async and not self.poll():
+        if m_async and not self.poll():
             return self._continue
         self._continue = RESUME_STOP
 
         while not self._continue and not self._detach:
-            if not async and self._continueTransactionId is not None:
+            if not m_async and self._continueTransactionId is not None:
                 self.send_continuationResult(self._continuationCommand, STATUS_BREAK, REASON_OK)
             #log.debug("retreiving current command packet")
             data = None
@@ -2546,12 +2546,12 @@ class backend(listcmd.ListCmd):
 
             #log.debug("cmdloop %r", data)
             if data:
-                if async:
+                if m_async:
                     self.onecmd(data, 'do_async_')
                 else:
                     self.onecmd(data)
             
-            if async:
+            if m_async:
                 break
 
         return self._continue
